@@ -28,32 +28,31 @@ static NSString *const DEMO_VIEWS_STORYBOARD_NAME = @"DemoViews";
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	BigNumber *firstBigNumber = [BigNumber bigNumberWithDecimalString:@"1231343132123541534231231321641232112"];
-	BigNumber *secondBigNumber = [BigNumber bigNumberWithDecimalString:@"234234231231234542124424215341"];
-	NSLog(@"\nfirstBigNumber = %@;\nsecondBigNumber = %@", firstBigNumber.decimalString, secondBigNumber.decimalString);
-	
+	BigNumber *firstBigNumber = [BigNumber bigNumberWithDecimalString:@"321641232112"];
+	BigNumber *secondBigNumber = [BigNumber bigNumberWithNumber:@(999424241)];
+
 	// 加
 	BigNumber *addResult = [firstBigNumber add:secondBigNumber];
-	NSLog(@"addResult: %@", addResult.decimalString);// 输出: 1231343366357772765465773446065447453
+	NSLog(@"addResult: %@", addResult.decimalString);// 输出: 322640656353
 	
 	// 减
 	BigNumber *subResult = [firstBigNumber sub:secondBigNumber];
-	NSLog(@"subResult: %@", subResult.decimalString);// 输出: 1231342897889310302996689197217016771
+	NSLog(@"subResult: %@", subResult.decimalString);// 输出: 320641807871
 	
 	// 乘
 	BigNumber *mulResult = [firstBigNumber mul:secondBigNumber];
-	NSLog(@"mulResult: %@", mulResult.decimalString);// 输出: 288422711934818213621854161923684704873335116585485401848052230192
+	NSLog(@"mulResult: %@", mulResult.decimalString);// 输出: 321456044277840426992
 	
 	// 除
 	BigNumber *divResult = [firstBigNumber div:secondBigNumber];
-	NSLog(@"divResult = %@", divResult.decimalString);// 输出: 5256888
+	NSLog(@"divResult = %@", divResult.decimalString);// 输出: 321
 	
 	// 余
 	BigNumber *modResult = [firstBigNumber mod:secondBigNumber];
-	NSLog(@"modResult = %@", modResult.decimalString);// 输出: 12774839444551851157105713304
+	NSLog(@"modResult = %@", modResult.decimalString);// 输出: 826050751
 	
 	// 比较
-	BOOL isEqual = [firstBigNumber isEqual:secondBigNumber];
+	BOOL isEqual = [firstBigNumber isEqualTo:secondBigNumber];
 	NSLog(@"是否相等: %@", isEqual ? @"相等" : @"不相等");// 输出: 不相等
 	
 	BOOL isFirstLessThanEqualToSecondNumber = [firstBigNumber lessThanEqualTo:secondBigNumber];

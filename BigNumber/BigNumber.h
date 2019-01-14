@@ -20,26 +20,26 @@
 @property (nonatomic, readonly) BOOL isZero;
 @property (nonatomic, readonly) BOOL isNegative;
 
+// Constant Values
 + (BigNumber *)constantNegativeOne;
 + (BigNumber *)constantZero;
 + (BigNumber *)constantOne;
 + (BigNumber *)constantTwo;
 
+// Init Methods
 + (instancetype)bigNumberWithDecimalString:(NSString *)decimalString;
-+ (instancetype)bigNumberWithHexString:(NSString *)hexString;
-
 + (instancetype)bigNumberWithNumber:(NSNumber *)number;
 + (instancetype)bigNumberWithInteger:(NSInteger)integer;
 
+// Calculate Methods
 - (BigNumber *)add:(BigNumber *)other;
 - (BigNumber *)sub:(BigNumber *)other;
 - (BigNumber *)mul:(BigNumber *)other;
 - (BigNumber *)div:(BigNumber *)other;
 - (BigNumber *)mod:(BigNumber *)other;
 
-- (BOOL)isEqual:(id)object;
-- (NSComparisonResult)compare:(id)other;
-
+// Compare Methods
+- (BOOL)isEqualTo:(BigNumber *)other;
 - (BOOL)lessThan:(BigNumber *)other;
 - (BOOL)lessThanEqualTo:(BigNumber *)other;
 - (BOOL)greaterThan:(BigNumber *)other;

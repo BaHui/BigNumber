@@ -24,12 +24,12 @@
 		246B4ED221ECBAAB00A7FD15 /* RegEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegEx.m; path = BigNumber/Utilities/RegEx.m; sourceTree = SOURCE_ROOT; };
 		246B4ED321ECBAAB00A7FD15 /* tommath_superclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tommath_superclass.h; path = BigNumber/Utilities/tommath_superclass.h; sourceTree = SOURCE_ROOT; };
 		246B4ED421ECBAAB00A7FD15 /* mpi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mpi.c; path = BigNumber/Utilities/mpi.c; sourceTree = SOURCE_ROOT; };
-		246B4ED521ECBAAB00A7FD15 /* tommath_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tommath_private.h; path = BigNumber/Utilities/tommath_private.h; sourceTree = SOURCE_ROOT; };
 		246B4ED621ECBAAB00A7FD15 /* RegEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegEx.h; path = BigNumber/Utilities/RegEx.h; sourceTree = SOURCE_ROOT; };
 		246B4ED721ECBAAB00A7FD15 /* tommath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tommath.h; path = BigNumber/Utilities/tommath.h; sourceTree = SOURCE_ROOT; };
 		246B4ED821ECBAAB00A7FD15 /* tommath_class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tommath_class.h; path = BigNumber/Utilities/tommath_class.h; sourceTree = SOURCE_ROOT; };
 		6F5A554F2158D9770078916C /* BHExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BHExampleViewController.h; path = Classes/BHExampleViewController.h; sourceTree = "<group>"; };
 		6F5A55502158D9770078916C /* BHExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BHExampleViewController.m; path = Classes/BHExampleViewController.m; sourceTree = "<group>"; };
+		6F5F997721ECEB99001EC647 /* tommath_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tommath_private.h; path = BigNumber/Utilities/tommath_private.h; sourceTree = SOURCE_ROOT; };
 		6FE8F9B02150E8D400107C93 /* BHDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BHDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE8F9B32150E8D400107C93 /* BHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHAppDelegate.h; sourceTree = "<group>"; };
 		6FE8F9B42150E8D400107C93 /* BHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHAppDelegate.m; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 				246B4ED421ECBAAB00A7FD15 /* mpi.c */,
 				246B4ED721ECBAAB00A7FD15 /* tommath.h */,
 				246B4ED821ECBAAB00A7FD15 /* tommath_class.h */,
-				246B4ED521ECBAAB00A7FD15 /* tommath_private.h */,
+				6F5F997721ECEB99001EC647 /* tommath_private.h */,
 				246B4ED321ECBAAB00A7FD15 /* tommath_superclass.h */,
 			);
 			name = Utilities;

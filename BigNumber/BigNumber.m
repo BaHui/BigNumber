@@ -41,6 +41,24 @@ static BigNumber *ConstantMaxSafeSignedInteger = nil;
 	});
 }
 
+#pragma mark - Constants
+
++ (BigNumber *)constantNegativeOne {
+	return ConstantNegativeOne;
+}
+
++ (BigNumber *)constantZero {
+	return ConstantZero;
+}
+
++ (BigNumber *)constantOne {
+	return ConstantOne;
+}
+
++ (BigNumber *)constantTwo {
+	return ConstantTwo;
+}
+
 - (instancetype)init {
 	self = [super init];
 	if (self) {
@@ -101,24 +119,6 @@ static BigNumber *ConstantMaxSafeSignedInteger = nil;
 
 - (mp_int *)_bigNumber {
 	return &_bigNumber;
-}
-
-#pragma mark - Constants
-
-+ (BigNumber *)constantNegativeOne {
-	return ConstantNegativeOne;
-}
-
-+ (BigNumber *)constantZero {
-	return ConstantZero;
-}
-
-+ (BigNumber *)constantOne {
-	return ConstantOne;
-}
-
-+ (BigNumber *)constantTwo {
-	return ConstantTwo;
 }
 
 #pragma mark - Operations
@@ -249,6 +249,11 @@ static BigNumber *ConstantMaxSafeSignedInteger = nil;
 }
 
 #pragma mark - More intuitive inequalities
+
+- (BOOL)isEqualTo:(BigNumber *)other {
+	int result = mp_cmp(&_bigNumber, [((BigNumber *)other) _bigNumber]);
+	return (result == MP_EQ);
+}
 
 - (BOOL)lessThan:(BigNumber *)other {
 	int result = mp_cmp(&_bigNumber, [((BigNumber *)other) _bigNumber]);

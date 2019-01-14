@@ -5,7 +5,7 @@
 	NSRegularExpression *_regex;
 }
 
-- (instancetype)initWithPattern: (NSString*)pattern {
+- (instancetype)initWithPattern:(NSString *)pattern {
 	self = [super init];
 	if (self) {
 		NSError *error = nil;
@@ -28,7 +28,7 @@
 	return (range.location != NSNotFound);
 }
 
-- (BOOL)matchesExactly: (NSString *)string {
+- (BOOL)matchesExactly:(NSString *)string {
 	NSRange range = [_regex rangeOfFirstMatchInString:string options:0 range:NSMakeRange(0, string.length)];
 	return (range.location == 0 && range.length == string.length);
 }
