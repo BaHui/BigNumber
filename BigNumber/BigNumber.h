@@ -9,7 +9,6 @@
 @interface BigNumber : NSObject
 
 @property (nonatomic, readonly) NSString *decimalString;
-@property (nonatomic, readonly) NSString *hexString;
 
 @property (nonatomic, readonly) BOOL isSafeUnsignedIntegerValue;
 @property (nonatomic, readonly) NSUInteger unsignedIntegerValue;
