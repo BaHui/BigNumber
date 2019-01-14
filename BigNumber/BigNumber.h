@@ -46,5 +46,3 @@
 - (BOOL)greaterThanEqualTo:(BigNumber *)other;
 
 @end
-
-
