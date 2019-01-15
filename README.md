@@ -1,8 +1,22 @@
+GitHub Demo: **[https://github.com/BaHui/BigNumber](https://github.com/BaHui/BigNumber)**
 ### 简介
-> **Ether项目中摘录的BigNumber类, 用于`大整数`的运算和比较 !!!**
+> **<ethers>开源框架中摘录的BigNumber类, 用于`大整数`的运算和比较 , 稍作整理, 去除了业务上面的代码模块. 改为较为通用的`BigNumber`类, 继承自`NSObject`.**
+
+### 场景
+> 在特定场景下, 基本数据类型的运算可能已经满足不了需求了, 为了避免数据的隐式转换, 那么就需要`大数`的运算了. 了解下基本数据类型的取值范围:
+**int: `2147483648～2147483647`**
+**unsigned int: `0～4294967295`**
+**unsigned long: `0～4294967295`**
+**long: `2147483648～2147483647`**
+**long long：`-9223372036854775808～9223372036854775807`**
+**unsigned long long: `1844674407370955161`**
+**__int64：`-9223372036854775808～9223372036854775807`**
+**unsigned __int64：`18446744073709551615`**
 
 ### 接口声明
-``` Swift
+``` Objective-C
+@interface BigNumber : NSObject
+
 // ** Constant Values **
 + (BigNumber *)constantNegativeOne;
 + (BigNumber *)constantZero;
@@ -22,14 +36,14 @@
 - (BigNumber *)mod:(BigNumber *)other;
 
 // ** Compare Methods **
-- (BOOL)isEqualTo:(BigNumber *)other;
+- (BOOL)equalTo:(BigNumber *)other;
 - (BOOL)lessThan:(BigNumber *)other;
 - (BOOL)lessThanEqualTo:(BigNumber *)other;
 - (BOOL)greaterThan:(BigNumber *)other;
 - (BOOL)greaterThanEqualTo:(BigNumber *)other;
 
+@end
 ```
-
 ### **使用姿势**
 ``` Swift
 BigNumber *firstBigNumber = [BigNumber bigNumberWithDecimalString:@"321641232112"];
