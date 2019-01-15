@@ -1,4 +1,5 @@
-GitHub Demo: **[https://github.com/BaHui/BigNumber](https://github.com/BaHui/BigNumber)**
+## BigNumber
+
 ### 简介
 > **<ethers>开源框架中摘录的BigNumber类, 用于`大整数`的运算和比较 , 稍作整理, 去除了业务上面的代码模块. 改为较为通用的`BigNumber`类, 继承自`NSObject`.**
 
